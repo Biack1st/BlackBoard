@@ -7,7 +7,10 @@
       "StarterPlayerScripts": {
         "$className": "StarterPlayerScripts",
         "BlackChat": {
-          "$path":"src/BlackChat"
+          "$path":"src/BlackChat",
+          "Packages": {
+            "$path": "Packages"
+          }
         }
       }
     }
