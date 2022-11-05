@@ -1,0 +1,15 @@
+{
+  "name": "BlackBoard",
+  "tree": {
+    "$className": "DataModel",
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "BlackChat": {
+          "$path":"src/BlackChat"
+        }
+      }
+    }
+  }
+}
