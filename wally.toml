@@ -1,7 +1,8 @@
 [package]
 name = "yusuf/blackboard"
-version = "0.1.0"
-registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+version = "0.1.0"
 
 [dependencies]
+roact = "roblox/roact@1.4.4"
