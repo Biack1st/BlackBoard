@@ -4,6 +4,7 @@ return {
 	FontColor = Color3.fromRGB(255, 255, 255), -- font color
 	Font = Enum.Font.GothamMedium, -- font
 	TextSize = 20, -- text size for the text
+	ScrollBarColor = Color3.fromRGB(255, 255, 255), -- scrollbar color
 	ColorPattern = {}, -- for color patterns so like red, white, black and will format it inside of the coloring. Overrides primary color
 	GroupIcons = {
 		-- icons for certain groups ie admins and star creators.
