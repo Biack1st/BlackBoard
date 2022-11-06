@@ -10,6 +10,7 @@ local PlayersStore: Rodux.Store = require(script:WaitForChild("Stores"):WaitForC
 function module:Initialize()
 	-- setup core
 	module:setUpFunctions()
+	module:addExistingPlayers()
 
 	-- setup ui
 	local blackChatApp = Roact.createElement(require(script:WaitForChild("Components"):WaitForChild("BlackChatApp")))
@@ -23,6 +24,15 @@ function module:setUpFunctions()
 			userId = player.UserId,
 		})
 	end)
+end
+
+function module:addExistingPlayers()
+	for _, player in Players:GetPlayers() do
+		PlayersStore:dispatch({
+			type = "PlayerJoin",
+			userId = player.UserId,
+		})
+	end
 end
 
 return module
