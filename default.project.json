@@ -9,7 +9,7 @@
         "BlackChat": {
           "$path":"src/BlackChat",
           "Packages": {
-            "$path": "Packages"
+            "$path": "./Packages"
           }
         }
       }

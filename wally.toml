@@ -5,4 +5,4 @@ registry = "https://github.com/UpliftGames/wally-index"
 version = "0.1.0"
 
 [dependencies]
-roact = "roblox/roact@1.4.4"
+Roact = "roblox/roact@1.4.4"
