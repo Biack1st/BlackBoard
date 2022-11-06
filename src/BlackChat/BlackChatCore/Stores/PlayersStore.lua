@@ -4,8 +4,8 @@ local Rodux: Rodux = require(script.Parent.Parent.Parent:WaitForChild("Packages"
 local config = require(script.Parent.Parent:WaitForChild("config"))
 
 local function createPlayerData(userId: number)
-	local playerName = Players:GetNameFromUserIdAsync(userId)
 	local playerInstance = Players:GetPlayerByUserId(userId)
+	local playerName = playerInstance.Name
 	local icons = {}
 
 	for groupId, imageId in config.GroupIcons do
@@ -24,11 +24,13 @@ end
 
 local PlayersStore = Rodux.Store.new(function(state, action)
 	if action.type == "PlayerJoin" then
+		print("player join")
 		local currentPlayers = state or {}
 
 		local playerData = createPlayerData(action.userId)
 
-		print(playerData)
+		table.insert(currentPlayers, playerData)
+		return currentPlayers
 	end
 end)
 
