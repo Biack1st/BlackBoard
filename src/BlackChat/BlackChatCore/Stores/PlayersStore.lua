@@ -8,7 +8,7 @@ local function createPlayerData(userId: number)
 	local playerInstance = Players:GetPlayerByUserId(userId)
 	local icons = {}
 
-	for groupId, imageId in config.groupIds do
+	for groupId, imageId in config.GroupIcons do
 		if playerInstance:IsInGroup(groupId) then
 			table.insert(icons, imageId)
 		end
@@ -31,3 +31,5 @@ local PlayersStore = Rodux.Store.new(function(state, action)
 		print(playerData)
 	end
 end)
+
+return PlayersStore
